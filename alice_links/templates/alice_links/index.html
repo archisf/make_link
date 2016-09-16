@@ -1,0 +1,28 @@
+{% extends 'alice_links/base.html' %}
+
+{% block shortlink %}
+    <div class="col-md-12">
+        <form class="form-inline input" role="form" action="{% url 'model:add_shorten_url' %}" method="post"
+              autocomplete="on">
+            {% csrf_token %}
+            <label for="id_http_url">Введите вашу ссылку:</label>
+            <input class="form-control" id="id_http_url" required maxlength="200" name="http_url" type="url" value=""
+                   placeholder="https://twitter.com/"/>
+            <button type="submit" class="btn btn-success">Уменьшить</button>
+            <label for="id_name"></label>
+            <input id="id_name" maxlength="20" name="name" type="text" value="{{ user.username }}"/>
+        </form>
+        <table class="table table-striped">
+            {% for urls in urls_list %}
+                <tr>
+                    <td>Длинная ссылка:</td>
+                    <td><a href="{{ urls.http_url }}" target="_blank">{{ urls.http_url }}</a></td>
+                    <td>Коротка ссылка:</td>
+                    <td><a href="../{{ urls.short_id }}" target="_blank"
+                           title="Для использования скопируйте адрес ссылки">{{ urls.short_id }}</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}
+

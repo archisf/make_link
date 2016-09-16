@@ -1,0 +1,79 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700';
+
+body {
+    font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+.navbar-default .navbar-text {
+    color: #fef500 !important;
+}
+
+.navbar-default .navbar-link {
+    color: white;
+}
+
+.navbar-default .navbar-brand {
+    color: white;
+}
+
+.navbar-right {
+    margin-right: 0;
+}
+
+.navbar-default {
+    background-color: #58bef5;
+    border-color: #51a2d7;
+}
+
+.form-control {
+    display: inline-block;
+    width: auto;
+}
+
+label {
+    font-weight: normal;
+}
+
+.input {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input label {
+    margin: 0 30px 0 30px;
+}
+
+.input input:nth-child(3) {
+    width: 300px;
+}
+
+.input label:nth-child(5) {
+    display: none;
+}
+
+.input input:nth-child(6) {
+    display: none;
+}
+
+.input button {
+    margin: 14px 40px;
+}
+
+tr td:nth-child(2) {
+    max-width: 600px;
+    word-wrap: break-word;
+    table-layout: fixed;
+}
+
+.table > tbody > tr > td {
+    vertical-align: middle;
+}
+
+form p {
+    display: inline-block;
+}
+
+.form_login {
+    float: right;
+}
+
